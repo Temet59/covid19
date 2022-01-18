@@ -1,0 +1,27 @@
+
+body{
+    font-size: medium;
+}
+
+.borde{
+    border-color: blueviolet;
+    border-style: solid;
+    border-width: 3px;
+}
+.cardgraf{
+    width: 50em;
+    height: 500px;
+    text-align: center;
+    margin: auto;
+}
+
+.grafico2{
+    width: 35em;
+    height: 500px;
+    text-align: center;
+    margin: auto;
+}
+
+.tammodal{
+    width: 35em;
+}
