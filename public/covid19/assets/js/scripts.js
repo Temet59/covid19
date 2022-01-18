@@ -163,6 +163,10 @@ let ventanasModales = async (datosbarra) => {
     })
 }
 
+
+
+
+
 var muestragraficolin = async (e) => {
     let lugargrafico = e.target;
     idgraf = lugargrafico.id;
