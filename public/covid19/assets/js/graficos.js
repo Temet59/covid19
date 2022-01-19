@@ -83,7 +83,8 @@ var graficoBarra = async () => {
     var chart = new CanvasJS.Chart("chartContainerbarr", {
         animationEnabled: true,
         title: {
-            text: "Estados de contagios Covid 19 Mundial"
+            text: "Estados de contagios Covid 19 Mundial",
+            fontFamily: "tahoma"
         },
         axisY: {
             title: "Personas",
