@@ -29,8 +29,8 @@ const datosGrafBarra = (data) => {
 var muestragraficolin = async (e) => {
     let lugargrafico = e.target;
     let idgraf = lugargrafico.id;
-    let pais = idgraf.replace('_', ' ');
-    pais = idgraf.replace('-', ',');
+    let pais = idgraf.replace('_', ' ').replace('-', ',');;
+   
     if (pais.split(" ").length>1)
      {
         isoPais.forEach((e) => {
