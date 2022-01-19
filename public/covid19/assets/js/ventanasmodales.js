@@ -17,7 +17,6 @@ var ventanasModales = async () => {
                             </div>`;
 
     datosbarra[activ].forEach((e, index) => {
-        //let idmodal = e.label.split(" ").join("") + index;
         let idgraf = e.label.replace(' ', '_');
             idgraf = e.label.replace(',', '-');
         if (e.y >= limiteActivos) {
