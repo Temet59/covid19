@@ -5,7 +5,8 @@ import {getPaises,postData,redefineActivosRecuperados} from './consumoapi.js';
 
 /*********************************** START DE PROYECTO ***********************************/
 
-const limiteActivos = 1000; //2000000;
+
+const limiteActivos =10000;
 var datosbarra = [];
 const activ = 0;
 const confi = 1;
