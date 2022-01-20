@@ -84,7 +84,7 @@ var graficoBarra = async () => {
         animationEnabled: true,
         title: {
             text: "Estados de contagios Covid 19 Mundial",
-            fontFamily: "tahoma"
+            fontFamily: "comic"
         },
         axisY: {
             title: "Personas",
