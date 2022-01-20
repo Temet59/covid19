@@ -1,6 +1,8 @@
 /*********************** MOSTRAR INFORMACION Y VENTANAS MODALES ************************/
-import { limiteActivos, datosbarra, activ, confi, falle, recup } from './scripts.js';
-import { muestragraficolin } from './graficos.js';
+
+import {limiteActivos,datosbarra,activ,confi,falle,recup} from './scripts.js';
+import {muestragraficolin} from './graficos.js';
+
 var ventanasModales = async () => {
     const infocovid = document.getElementById("infocovid19");
     infocovid.innerHTML = "";
@@ -10,6 +12,7 @@ var ventanasModales = async () => {
         let idgraf = e.label.replace(' ', '_');
         idgraf = e.label.replace(',', '-');
         if (e.y >= limiteActivos) {
+
             infocovid.innerHTML += `
             <table class="table table-striped">`;
 
@@ -43,7 +46,6 @@ var ventanasModales = async () => {
                     </tr>
                 
                     <tr>
-
 
                     <td>
     <div class="modal fade" id="mod${index}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

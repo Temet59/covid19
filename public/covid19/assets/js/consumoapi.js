@@ -1,13 +1,4 @@
-/*********************** DECLARACIONES GLOBALES Y CONSUMO DE API **********************
-
-const limiteActivos = 2000000;
-var datosbarra = [];
-const activ = 0;
-const confi = 1;
-const falle = 2;
-const recup = 3;
-*/
-
+/*********************** DECLARACIONES GLOBALES Y CONSUMO DE API **********************/
 
 
 const getPaises = async (jwt) => {

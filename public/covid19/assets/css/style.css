@@ -13,8 +13,8 @@ nav {
     border-width: 3px;
 }
 .cardgraf{
-    width: 50em;
-    height: 500px;
+    width: 100%;
+    height: 550px;
     text-align: center;
     margin: auto;
 }
