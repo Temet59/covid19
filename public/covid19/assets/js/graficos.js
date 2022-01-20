@@ -84,6 +84,8 @@ var graficoBarra = async () => {
         title: {
             text: "Paises con Covid-19",
             fontFamily: 'Roboto Mono',
+            text: "Estados de contagios Covid 19 Mundial",
+            fontFamily: "comic"
         },
         axisY: {
             title: "",
