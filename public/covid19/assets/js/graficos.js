@@ -78,7 +78,6 @@ var graficoLineas = async (idgraf, detalle) => {
     chart.render();
 }
 
-
 var graficoBarra = async () => {
     var chart = new CanvasJS.Chart("chartContainerbarr", {
         animationEnabled: true,
@@ -103,6 +102,8 @@ var graficoBarra = async () => {
             shared: true
         },
         legend: {
+            horizontalAlign: "center", 
+            verticalAlign: "top",
             cursor: "pointer",
             itemclick: toggleDataSeries
         },

@@ -1,6 +1,7 @@
 /*********************** MOSTRAR INFORMACION Y VENTANAS MODALES ************************/
 import {limiteActivos,datosbarra,activ,confi,falle,recup} from './scripts.js';
 import {muestragraficolin} from './graficos.js';
+
 var ventanasModales = async () => {
     const infocovid = document.getElementById("infocovid19");
     infocovid.innerHTML = "";
@@ -29,8 +30,8 @@ var ventanasModales = async () => {
                             <div class="col-6 col-md-2">${datosbarra[falle][index].y}</div>
                             <div class="col-6 col-md-2">${datosbarra[recup][index].y}</div>
                             <div id="btn${index}" class="col-6 col-md-2 grafmodal" data-toggle="modal" data-target="#mod${index}">
-                                <!--a href="">ver detalle</a-->
-                                <span class="linksimu" id="${idgraf}">ver detalle</span>
+                                <!--a  href="#">ver detalle</a-->
+                                <span id="${idgraf}" class="linksimu" >ver detalle</span-->
                             </div>
                             </div>
                         </div>
