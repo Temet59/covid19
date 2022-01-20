@@ -31,20 +31,19 @@ var muestragraficolin = async (e) => {
     let idgraf = lugargrafico.id;
     let pais = idgraf.replace('_', ' ');
     pais = idgraf.replace('-', ',');
-    if (pais.split(" ").length>1)
-     {
+    if (pais.split(" ").length > 1) {
         isoPais.forEach((e) => {
             if (pais == e.paising) {
-                pais=e.ISO_2;
+                pais = e.ISO_2;
             }
         });
     }
     console.log(`Pais :  ${pais}`);
     const token = localStorage.getItem('jwt-token');
     if (token) {
-        const deta = await getDetalle(token,pais);
+        const deta = await getDetalle(token, pais);
         await graficoLineas(idgraf, deta);
-    } 
+    }
 };
 
 var graficoLineas = async (idgraf, detalle) => {
@@ -83,32 +82,36 @@ var graficoBarra = async () => {
     var chart = new CanvasJS.Chart("chartContainerbarr", {
         animationEnabled: true,
         title: {
+            text: "Paises con Covid-19",
+            fontFamily: 'Roboto Mono',
             text: "Estados de contagios Covid 19 Mundial",
             fontFamily: "comic"
         },
         axisY: {
-            title: "Personas",
+            title: "",
             titleFontColor: "#4F81BC",
             lineColor: "#4F81BC",
-            labelFontColor: "#4F81BC",
-            tickColor: "#4F81BC"
+            tickColor: "#4F81BC",
+            interval: 5000000,
+            gridColor: "#f2f2f2",
         },
-        axisY2: {
-            title: "",
-            titleFontColor: "#C0504E",
-            lineColor: "#C0504E",
-            labelFontColor: "#C0504E",
-            tickColor: "#C0504E"
+        axisX: {
+            labelAngle: -30,
+            gridColor: "#f2f2f2",
+            gridThickness: 1,
         },
         toolTip: {
             shared: true
         },
         legend: {
+            horizontalAlign: "center",
+            verticalAlign: "top",
             cursor: "pointer",
             itemclick: toggleDataSeries
         },
         data: [{
             type: "column",
+            color: "#fe6183",
             name: "Activos",
             legendText: "Casos Activos",
             showInLegend: true,
@@ -117,24 +120,27 @@ var graficoBarra = async () => {
         {
             type: "column",
             name: "Confirmados",
+            color: "#fcce51",
             legendText: "Casos Confirmados",
-            axisYType: "secondary",
+            //axisYType: "secondary",
             showInLegend: true,
             dataPoints: datosbarra[confi]
         },
         {
             type: "column",
             name: "Muertos",
+            color: "#c8cbcf",
             legendText: "Casos Muertos",
-            axisYType: "secondary",
+            //axisYType: "secondary",
             showInLegend: true,
             dataPoints: datosbarra[falle]
         },
         {
             type: "column",
+            color: "#49c0c4",
             name: "Recuperados",
             legendText: "Casos Recuperados",
-            axisYType: "secondary",
+            //axisYType: "secondary",
             showInLegend: true,
             dataPoints: datosbarra[recup]
         }]
